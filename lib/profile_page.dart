@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_card/dice_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -90,6 +91,20 @@ class ProfilePage extends StatelessWidget {
           ),
           // TODO : Add at least 3 or more cards e.g : Phone , Gender , University Name etc.
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const DicePage(),
+            ),
+          );
+        },
+        child: const Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: Colors.teal,
+        ),
       ),
     );
   }
